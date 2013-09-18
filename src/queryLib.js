@@ -1,4 +1,4 @@
-;(function ( $, window, document, undefined ) {
+;(function (window, document, undefined ) {
 	var doc = window.document,
 		docElem = doc.documentElement,
 		head = doc.getElementsByTagName( "head" )[0] || docElem,
@@ -164,4 +164,4 @@
     	window.queryLib.cached = instance;
 	};
     
-})( jQuery, window, document );
+})(window, document);
