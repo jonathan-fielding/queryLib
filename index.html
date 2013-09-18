@@ -61,7 +61,7 @@
                     <p>To get started with queryLib the first step is to include it in your project, you can do this in two ways</p>
                     <ul>
                         <li>Download and add the queryLib.js (or queryLib.min.js) file to your site</li>
-                        <li>Use Bower to add to your project using <code>bower install queryLib</code></li>
+                        <li>Use Bower to add to your project using <code>bower install querylib</code></li>
                     </ul>
 
                 </div>
@@ -72,7 +72,16 @@
 
                     <p>At the moment the API is pretty basic</p>
 
-                    <h3></h3>
+                    <h3>Get mediaqueries (async)</h3>
+                    <p>To get the mediaqueries we need to do an asyncronous request go get all the attached stylesheets and then parse them in javascript, our results are returned to the callback.</p>
+
+                    <pre>queryLib(function(queries){
+    console.log(queries)
+});</pre>
+
+                    <h3>Get mediaqueries (cached)</h3>
+                    <p>To retrieve the last set of media query results you can look at the <code>queryLib.cached</code> object, please note that we must have done a async request earlier to populate the cache.</p>
+                    <pre>queryLib.cached</pre>
                 </div>
             </section>
             <section id="browsers">
@@ -150,6 +159,7 @@
         <script src="docs/bower_components/sass-bootstrap/js/bootstrap-scrollspy.js"></script>
         <script src="docs/bower_components/sass-bootstrap/js/bootstrap-collapse.js"></script>
         <script src="docs/js/script.js"></script>
+        <script src="src/queryLib.js"></script>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

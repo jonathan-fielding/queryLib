@@ -161,7 +161,7 @@
 
     window.queryLib = function(callback){
     	var instance = new queryLib(callback);
-    	window.queryLib.cached = instance;
+    	window.queryLib.cached = instance.properties.mediastyles;
 	};
     
 })(window, document);
